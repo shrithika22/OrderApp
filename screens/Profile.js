@@ -134,7 +134,11 @@ export default function ProfileScreen() {
 
   const logout = async () => {
     await AsyncStorage.clear();
-    navigation.replace('Onboarding');
+    //navigation.replace('Onboarding');
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'Onboarding' }],
+    });
   };
 
   return (
