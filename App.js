@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import Onboarding from './screens/Onboarding';
 import Profile from './screens/Profile';
 import SplashScreen from './screens/SplashScreen';
+import Home from './screens/Home';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,7 +16,8 @@ function OnboardingWrapper({ navigation }) {
     <Onboarding
       onComplete={async () => {
         await AsyncStorage.setItem('onboardingComplete', 'true');
-        navigation.replace('Profile');
+        navigation.replace('Home');
+        //navigation.replace('Profile');
       }}
     />
   );
@@ -66,10 +68,11 @@ export default function App() {
           </Stack.Screen>
         )}
       </Stack.Navigator> */}
-        <Stack.Navigator initialRouteName={state.isOnboardingCompleted ? 'Profile' : 'Onboarding'}>
+      <Stack.Navigator initialRouteName={state.isOnboardingCompleted ? 'Home' : 'Onboarding'}>
           <Stack.Screen name="Onboarding" component={OnboardingWrapper} />
+          <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Profile" component={Profile} />
-        </Stack.Navigator>
+      </Stack.Navigator> 
     </NavigationContainer>
   );
 }
