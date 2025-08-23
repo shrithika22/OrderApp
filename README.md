@@ -10,6 +10,7 @@
     <td width="50"></td> <!-- Spacer cell -->
     <td><img src="https://github.com/shrithika22/OrderApp/blob/branch1/assets/Screenshots/Filter.png" height="300"></td>
   </tr>
+  <td height="50"></td> <!-- Spacer cell -->
   <tr>
     <td><img src="https://github.com/shrithika22/OrderApp/blob/branch1/assets/Screenshots/Search.png" height="300"></td>
     <td width="50"></td> <!-- Spacer cell -->
