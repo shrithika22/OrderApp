@@ -1,32 +1,3 @@
-// // screens/Profile.js
-// import { StyleSheet, Text, View } from 'react-native';
-
-// const Profile = () => {
-//   return (
-//     <View style={styles.container}>
-//       <Text style={styles.text}>Profile Page</Text>
-//     </View>
-//   );
-// };
-
-// export default Profile;
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//   },
-//   text: {
-//     fontSize: 20,
-//     fontWeight: 'bold',
-//   },
-// });
-
-
-
-// ProfileScreen.tsx
 import React, { useEffect, useState } from 'react';
 import {
   View, Text, TextInput, Button, Image, TouchableOpacity, StyleSheet, Alert, ScrollView
@@ -50,25 +21,6 @@ export default function ProfileScreen() {
   const [specialOffers, setSpecialOffers] = useState(false);
   const [newsletter, setNewsletter] = useState(false);
 
-  // // Load data from AsyncStorage
-  // useEffect(() => {
-  //   const loadData = async () => {
-  //     const data = await AsyncStorage.multiGet([
-  //       'firstName', 'lastName', 'email', 'phone', 'avatar',
-  //       'orderStatus', 'passwordChange', 'specialOffers', 'newsletter'
-  //     ]);
-  //     setFirstName(data[0][1] || '');
-  //     setLastName(data[1][1] || '');
-  //     setEmail(data[2][1] || '');
-  //     setPhone(data[3][1] || '');
-  //     setAvatarUri(data[4][1] || '');
-  //     setOrderStatus(JSON.parse(data[5][1] || 'false'));
-  //     setPasswordChange(JSON.parse(data[6][1] || 'false'));
-  //     setSpecialOffers(JSON.parse(data[7][1] || 'false'));
-  //     setNewsletter(JSON.parse(data[8][1] || 'false'));
-  //   };
-  //   loadData();
-  // }, []);
 
   useEffect(() => {
     const loadData = async () => {
@@ -230,21 +182,50 @@ const styles = StyleSheet.create({
     marginBottom: 10 
   },
   input: {
-    borderWidth: 1, borderColor: '#ccc', borderRadius: 5,
-    padding: 10, marginBottom: 10,
+    borderWidth: 1, 
+    borderColor: '#ccc', 
+    borderRadius: 5,
+    padding: 10, 
+    marginBottom: 10,
   },
-  avatarContainer: { alignItems: 'center', marginBottom: 20 },
-  avatar: { width: 100, height: 100, borderRadius: 50 },
+  avatarContainer: { 
+    alignItems: 'center', 
+    marginBottom: 20 
+  },
+  avatar: { 
+    width: 100, 
+    height: 100, 
+    borderRadius: 50 
+  },
   placeholder: {
-    width: 100, height: 100, borderRadius: 50,
-    backgroundColor: '#ccc', justifyContent: 'center', alignItems: 'center',
+    width: 100, 
+    height: 100, 
+    borderRadius: 50,
+    backgroundColor: '#ccc', 
+    justifyContent: 'center', 
+    alignItems: 'center',
   },
-  initials: { fontSize: 32, fontWeight: 'bold', color: '#fff' },
-  avatarButtons: { flexDirection: 'row', gap: 10, marginTop: 10 },
-  checkboxRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 10 },
-  checkboxLabel: { marginLeft: 10 },
+  initials: { 
+    fontSize: 32, 
+    fontWeight: 'bold', 
+    color: '#fff' 
+  },
+  avatarButtons: { 
+    flexDirection: 'row', 
+    gap: 10, 
+    marginTop: 10 
+  },
+  checkboxRow: { 
+    flexDirection: 'row', 
+    alignItems: 'center', 
+    marginBottom: 10 
+  },
+  checkboxLabel: { 
+    marginLeft: 10 
+  },
   buttonRow: {
-    flexDirection: 'row', justifyContent: 'space-between',
+    flexDirection: 'row', 
+    justifyContent: 'space-between',
     marginTop: 30, gap: 10,
   },
 });

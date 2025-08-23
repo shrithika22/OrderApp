@@ -1,4 +1,3 @@
-// App.js
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -19,7 +18,6 @@ function OnboardingWrapper({ navigation }) {
       onComplete={async () => {
         await AsyncStorage.setItem('onboardingComplete', 'true');
         navigation.replace('Home');
-        //navigation.replace('Profile');
       }}
     />
   );
@@ -53,23 +51,6 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      {/* <Stack.Navigator>
-        {state.isOnboardingCompleted ? (
-          <Stack.Screen name="Profile" component={Profile} />
-        ) : (
-          <Stack.Screen name="Onboarding">
-            {(props) => (
-              <Onboarding
-                {...props}
-                onComplete={async () => {
-                  await AsyncStorage.setItem('onboardingComplete', 'true');
-                  setState({ isLoading: false, isOnboardingCompleted: true });
-                }}
-              />
-            )}
-          </Stack.Screen>
-        )}
-      </Stack.Navigator> */}
       <Stack.Navigator initialRouteName={state.isOnboardingCompleted ? 'Home' : 'Onboarding'}>
           <Stack.Screen name="Onboarding" component={OnboardingWrapper} />
           <Stack.Screen name="Home" component={Home} />
