@@ -86,14 +86,40 @@ const Item = () => {
 export default Item;
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#fff' },
-  image: { width: '100%', height: 220 },
-  content: { padding: 16 },
-  name: { fontSize: 22, fontWeight: 'bold', marginBottom: 4 },
-  description: { fontSize: 14, color: '#555', marginBottom: 12 },
-  delivery: { fontSize: 14, marginBottom: 12 },
-  change: { color: '#007AFF', textDecorationLine: 'underline' },
-  sectionTitle: { fontSize: 16, fontWeight: '600', marginVertical: 8 },
+  container: { 
+    flex: 1, 
+    backgroundColor: '#fff' 
+  },
+  image: {
+    width: '100%', 
+    height: 220 
+  },
+  content: { 
+    padding: 16 
+  },
+  name: { 
+    fontSize: 22, 
+    fontWeight: 'bold', 
+    marginBottom: 4 
+  },
+  description: { 
+    fontSize: 14, 
+    color: '#555', 
+    marginBottom: 12 
+  },
+  delivery: { 
+    fontSize: 14, 
+    marginBottom: 12 
+  },
+  change: { 
+    color: '#007AFF', 
+    textDecorationLine: 'underline' 
+  },
+  sectionTitle: { 
+    fontSize: 16, 
+    fontWeight: '600', 
+    marginVertical: 8 
+  },
   toppingRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -101,9 +127,15 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0.5,
     borderColor: '#ccc',
   },
-  toppingText: { fontSize: 14 },
-  toppingPrice: { fontSize: 14 },
-  checkbox: { fontSize: 18 },
+  toppingText: { 
+    fontSize: 14 
+  },
+  toppingPrice: { 
+    fontSize: 14 
+  },
+  checkbox: { 
+    fontSize: 18 
+  },
   quantityRow: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -115,12 +147,18 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     color: '#007AFF',
   },
-  quantityText: { fontSize: 18, marginHorizontal: 12 },
+  quantityText: { 
+    fontSize: 18, 
+    marginHorizontal: 12 
+  },
   addButton: {
     backgroundColor: '#F4CE14',
     padding: 14,
     borderRadius: 8,
     alignItems: 'center',
   },
-  addButtonText: { fontSize: 16, fontWeight: 'bold' },
+  addButtonText: { 
+    fontSize: 16, 
+    fontWeight: 'bold' 
+  },
 });
