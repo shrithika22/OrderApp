@@ -12,6 +12,7 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import * as SQLite from 'expo-sqlite';
 
+
 const db = SQLite.openDatabase('little_lemon');
 const MENU_URL =
   'https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/capstone.json';
@@ -126,17 +127,19 @@ const Home = () => {
 
 
   const renderItem = ({ item }) => (
-    <View style={styles.menuItem}>
-      <Image
-        source={{ uri: `${IMAGE_BASE}${item.image}?raw=true` }}
-        style={styles.menuImage}
-      />
-      <View style={styles.menuText}>
-        <Text style={styles.menuName}>{item.name}</Text>
-        <Text style={styles.menuDescription}>{item.description}</Text>
-        <Text style={styles.menuPrice}>${item.price.toFixed(2)}</Text>
+    <TouchableOpacity onPress={() => navigation.navigate('Item', { item })}>
+      <View style={styles.menuItem}>
+        <Image
+          source={{ uri: `${IMAGE_BASE}${item.image}?raw=true` }}
+          style={styles.menuImage}
+        />
+        <View style={styles.menuText}>
+          <Text style={styles.menuName}>{item.name}</Text>
+          <Text style={styles.menuDescription}>{item.description}</Text>
+          <Text style={styles.menuPrice}>${item.price.toFixed(2)}</Text>
+        </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 
   return (
@@ -225,7 +228,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    paddingTop: 40,
+    paddingTop: 5,
   },
   header: {
     flexDirection: 'row',
